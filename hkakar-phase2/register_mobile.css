@@ -1,0 +1,97 @@
+/* CSS for register page */
+
+/*Change the background color and add padding to the body*/
+body{
+    background-color:white;
+    margin:0;
+}
+/*Use grid layout to arrange the sections and add gap between them*/
+.container {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 
+        "links links"
+        "register register";}
+
+/*Style the links section with flexbox and add background color. Style the links with no list style, padding, and color. Add hover effect to change background and text color*/
+.links {
+    grid-area:links;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: lavenderblush;
+    grid-column: 1/-1;
+}
+.links ul {
+    font-family:roboto condensed, sans-serif;
+    list-style-type: none;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;}
+
+.links a{
+    padding: 0.5rem;
+    color:black;
+    text-decoration:none;
+    
+}
+.links a:hover {
+    background-color:purple;
+    color: white;
+    border-radius: 5px;
+}
+/*Style the register section with flexbox and add background color. Style the heading, input fields, and buttons*/
+.register{
+    grid-area: register;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: lavenderblush;
+    border-radius: 8px; 
+    width: 300px;
+    margin: 0 auto;}
+
+.register h2{
+    font-family: bebas neue, sans-serif;
+    font-size: 2.5rem;
+    color:thistle;
+}
+
+.register label{
+    font-family: roboto condensed, sans-serif;
+    color:purple;
+    font-size: 1.5rem;
+}
+
+.register input[type="email"],
+.register input[type="password"]{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+}
+
+.register input[type="submit"]{
+    color: #f3e6ec;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #553858;
+    font-family: roboto condensed, sans-serif;
+    border-radius: 4px;
+}
+
+.register input[type="button"]{
+    color: #f3e6ec;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #553858;
+    font-family: roboto condensed, sans-serif;
+    border-radius: 4px;
+}
+

@@ -1,0 +1,131 @@
+/* CSS for education page */
+/*Change the background color and remove margin to the body*/
+body{
+    background-color: white;
+    margin:0;
+    height: 100%;
+}
+/*Style the education section with flexbox and add background color. Style the heading and text*/
+.education h2 {
+    color:thistle;
+    font-family: bebas neue, cursive;
+    font-size: 2rem;
+}
+
+img {
+    width: 100px;
+}
+
+img:hover{
+    width: 110px;
+    
+}
+
+/*Style the qmul section*/
+
+.qmul{
+    grid-area: qmul;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 0.1rem black;
+    border-radius: 10px;
+    font-family:roboto condensed;
+    padding: 1rem;
+    background-color:lavenderblush;
+}
+/*Style the tgs section*/
+.tgs{
+    grid-area: tgs;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 0.1rem black;
+    border-radius: 10px;
+    font-family:roboto condensed;
+    padding: 1rem;
+    background-color:lavenderblush;
+}
+/*Style the hgabr section*/
+.hgabr{
+    grid-area:hgabr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 0.1rem black;
+    border-radius: 10px;
+    font-family:roboto condensed;
+    padding: 1rem;
+    background-color:lavenderblush;
+}
+
+.education {
+    grid-area: education;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Use grid layout to arrange the sections and add gap between them*/
+.container{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "links links links"
+        "education education education"
+        "qmul tgs hgabr"
+        "contact contact contact";
+}
+/*Style the links section with flexbox and add background color. Style the links with no list style, padding, and color. Add hover effect to change background and text color*/
+.links {
+    grid-area:links;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color:lavenderblush;
+    grid-column:1/-1;
+
+}
+.links ul {
+    font-family:roboto condensed, sans-serif;
+    list-style-type: none;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;}
+
+.links a {
+    padding: 0.5rem;
+    color: black;
+    text-decoration:none;
+    
+}
+.links a:hover {
+    background-color: purple;
+    color:white;
+    border-radius: 5px;
+}
+
+/*Style footer*/
+.contact h2{
+    color:thistle;
+    font-family: bebas neue, cursive;
+    font-size: 2rem;
+}
+
+.contact {
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-top: solid 0.1rem black;
+    padding: 1rem;
+    font-family:roboto condensed;
+    color:purple;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color:lavenderblush;
+}

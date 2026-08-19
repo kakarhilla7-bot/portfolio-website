@@ -1,0 +1,112 @@
+/* CSS for about me and contact page */
+/*Change the background color and remove margin to the body*/
+body{
+    background-color:white;
+    margin:0;}
+
+/*Use grid layout to arrange the sections and add gap between them*/
+.container {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 
+        "links links"
+        "aboutme aboutme"
+        "contact contact";}
+
+/*Style the links section with flexbox and add background color*/
+.links {
+    grid-area:links;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: lavenderblush;
+    grid-column: 1/-1;
+}
+/*Style the links with no list style, padding, and color. Add hover effect to change background and text color*/
+.links ul {
+    font-family:roboto condensed;
+    list-style-type: none;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;}
+
+.links a {
+    padding: 0.5rem;
+    color: black;
+    text-decoration:none;
+    
+}
+.links a:hover {
+    background-color: purple;
+    color: white;
+    border-radius: 5px;
+}
+/*Style the about me section with flexbox and add background color. Style the image, heading, and article text*/
+.aboutme img{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    
+}
+
+.aboutme h2{
+    font-family: bebas neue;
+    color:thistle;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;}
+
+.aboutme article{
+    margin:auto;
+    padding-left:0.5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color:purple;
+    font-family:roboto condensed, sans-serif;
+    font-size: 1rem;
+    text-align:center;
+}
+
+.aboutme img, article{
+    display:flex;
+    flex-direction: column;
+}
+
+.aboutme {
+    grid-area: aboutme;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: purple;
+    font-family: roboto condensed, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+
+}
+/*Style the contact section with flexbox and add background color. Style the heading and text*/
+.contact {
+    grid-area: contact;
+    display: flex;
+    gap: 1rem;
+    color: purple;
+    font-family: roboto condensed, sans-serif;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-top: solid black 0.1rem;
+    padding-top: 1rem;
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background-color:lavenderblush;
+}
+
+.contact h2 {
+    font-family: bebas neue;
+    color: thistle;
+    font-size: 2rem;
+    margin: 0;
+}

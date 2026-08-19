@@ -1,0 +1,96 @@
+/* CSS for add entry page */
+
+/*Change the background color and remove margin to the body*/
+body{
+    background-color:white;
+    margin:0;
+}
+/*Use grid layout to arrange the sections and add gap between them*/
+.container {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+        "links links"
+        "addEntry addEntry"
+        "buttons buttons";}
+
+/*Style the links section with flexbox and add background color*/
+.links {
+    grid-area:links;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: lavenderblush;
+
+}
+/*Style the links with no list style, padding, and color. Add hover effect to change background and text color*/
+.links ul {
+    font-family:roboto condensed, sans-serif;
+    list-style-type: none;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;}
+
+.links a{
+    padding: 0.5rem;
+    color: black;
+    text-decoration:none;
+    
+}
+.links a:hover {
+    background-color: purple;
+    color: white;
+    border-radius: 5px;
+}
+/*Style the add entry section with flexbox and add background color. Style the heading, input fields, and buttons*/
+.addEntry{
+    grid-area: addEntry;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: lavenderblush;
+    border-radius: 8px;
+    width: 300px;
+    margin: 0 auto;}
+
+.addEntry h2{
+    font-family: Bebas Neue, cursive;
+    font-size: 2.5rem;
+    color:thistle;}
+
+.addEntry input[type="text"],
+.addEntry textarea{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+}
+
+.addEntry input[type="submit"]{
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color:purple;
+    font-family: roboto condensed, sans-serif;
+}
+
+.addEntry input[type="button"]{
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color:purple;
+    font-family: roboto condensed, sans-serif;
+}
+/*Style the buttons section with flexbox and add background color. Style the buttons*/
+.buttons{
+    grid-area: buttons;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}

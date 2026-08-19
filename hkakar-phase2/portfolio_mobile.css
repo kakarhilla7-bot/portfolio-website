@@ -1,0 +1,132 @@
+/*CSS for the portfolio and experience page of the website. It uses grid layout to arrange the sections and add gap between them. It also styles the links, portfolio, experience, and project sections with different fonts, colors, and sizes.*/
+/*Change the background color and add margin to the body*/
+body{
+    margin:0.5rem;
+    background-color: white;
+}
+/*Use grid layout to arrange the sections and add gap between them*/
+.container{
+    display: grid;
+    grid-template-areas: 
+        "links links"
+        "portfolio portfolio"
+        "project1 project1"
+        "project2 project2"
+        "experience experience"
+        "experience1 experience1"
+        "contact contact";
+    gap: 0.5rem;
+}
+/*Style the links section with flexbox and add background color. Style the links with no list style, padding, and color. Add hover effect to change background and text color*/
+.links {
+    grid-area:links;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color:lavenderblush;
+    margin:0;
+
+}
+.links ul {
+    font-family:roboto condensed, sans-serif;
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    }
+
+.links a {
+    color:black;
+    text-decoration:none;
+    
+}
+.links a:hover {
+    background-color:purple;
+    color:white;
+    border-radius: 5px;
+}
+/*Style the portfolio section with grid area, font, and color. Style the heading with size and text decoration*/
+.portfolio{
+    grid-area: portfolio;
+    display: flex;
+    flex-direction: column;
+    font-family: roboto condensed, sans-serif;
+    color: purple;
+}
+
+.portfolio h2{
+    font-family: bebas neue;
+    color: thistle;
+    font-size: 1.5rem;
+}
+/*Style the project and experience sections with grid area, font, and color. Style the experience heading with size and text decoration*/
+.project1{
+    grid-area: project1;
+    display: flex;
+    flex-direction: column;
+    font-family: roboto condensed, sans-serif;
+    color: purple;
+    font-size: 0.8rem;
+}
+
+.project2{
+    grid-area: project2;
+    display: flex;
+    flex-direction: column;
+    font-family: roboto condensed, sans-serif;
+    color: purple;
+    font-size: 0.8rem;
+}
+
+.experience{
+    grid-area: experience;
+    display: flex;
+    flex-direction: column;
+    font-family: roboto condensed, sans-serif;
+    color: purple;
+    font-size: 0.8rem;
+}
+
+.experience h2{
+    font-family:bebas neue;
+    font-size: 1.5rem;
+    color: thistle
+}
+
+.experience1{
+    grid-area: experience1;
+    display: flex;
+    flex-direction: column;
+    font-family: roboto condensed, sans-serif;
+    color: purple;
+    font-size: 0.8rem;
+}
+
+
+.contact {
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: purple;
+    font-family: roboto condensed, sans-serif;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-top: solid black 0.1rem;
+    padding-top: 1rem;
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    background-color: lavenderblush;
+
+}
+
+.contact h2 {
+    font-family: bebas neue;
+    color: thistle;
+    font-size: 1.5rem;
+    margin: 0;
+}
